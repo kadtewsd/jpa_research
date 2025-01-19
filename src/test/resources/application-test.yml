@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update                                    # スキーマ検証、必要に応じて変更可能
+    show-sql: true                                           # クエリをログに表示する
+    properties:
+      hibernate:
+        format_sql: true                                     # クエリをフォーマット表示
+  flyway:
+    enabled:  false                                           # Flywayを有効化

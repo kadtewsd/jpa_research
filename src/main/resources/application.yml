@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jpa # データベース名を変更してください
+    username: root                                 # ユーザー名を変更してください
+    password:  password                                # パスワードを変更してください
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate                                     # スキーマ検証、必要に応じて変更可能
+    show-sql: true                                           # クエリをログに表示する
+    properties:
+      hibernate:
+        format_sql: true                                     # クエリをフォーマット表示
+  flyway:
+    enabled: true                                            # Flywayを有効化
